@@ -1,5 +1,9 @@
 class ArticlesController < ApplicationController
 
+  def show
+    @article = Article.all
+  end
+
   def new
     @article = Article.new
   end
@@ -10,6 +14,7 @@ class ArticlesController < ApplicationController
   	@article.save
   	redirect_to @article
   end
+
 
   private
 
